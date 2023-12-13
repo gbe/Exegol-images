@@ -459,7 +459,7 @@
             "category": "Groups",
             "queryList": [{
                 "final": true,
-                "query": "Match (n:Group) WHERE n.name CONTAINS 'ADMIN' RETURN n"
+                "query": "MATCH (n:Group) WHERE n.name CONTAINS 'ADMIN' RETURN n"
             }]
         },
         {
@@ -550,7 +550,7 @@
             "category": "Users",
             "queryList": [{
                 "final": true,
-                "query": "Match p=(u:User)-[:MemberOf]->(g:Group) WHERE toUPPER (g.name) CONTAINS 'VPN' RETURN p"
+                "query": "MATCH p=(u:User)-[:MemberOf]->(g:Group) WHERE toUPPER (g.name) CONTAINS 'VPN' RETURN p"
             }]
         },
         {
